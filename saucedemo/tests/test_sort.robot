@@ -1,17 +1,20 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    custom_browser.py
+Library    ../custom_browser.py
+Library    ../screenshot_listener.py
 
 
 *** Variables ***
-${url}    https://www.saucedemo.com/
+${url}    https://www.saucedemo.com
 
 
 *** Test Cases ***
 Sort Z-A 
     ${options}=    custom_browser.Get Chrome Options
     Create Webdriver    Chrome    options=${options}
-    Go To    https://saucedemo.com
+    Go To    ${url}
+
+    
 
     
     Input Text    id=user-name    standard_user
@@ -22,8 +25,6 @@ Sort Z-A
     Wait Until Element Is Visible    xpath=//*[@id="header_container"]/div[2]/div/span/span    timeout=5s
     Click Element    xpath=//*[@id="header_container"]/div[2]/div/span/select/option[2]
 
-
-    Sleep    3
     Close Browser
 
 Sort Price L-H
@@ -40,8 +41,6 @@ Sort Price L-H
     Wait Until Element Is Visible    xpath=//*[@id="header_container"]/div[2]/div/span/span    timeout=5s
     Click Element    xpath=//*[@id="header_container"]/div[2]/div/span/select/option[3]
 
-
-    Sleep    3
     Close Browser
 
 Sort Price H-L
@@ -58,7 +57,5 @@ Sort Price H-L
     Wait Until Element Is Visible    xpath=//*[@id="header_container"]/div[2]/div/span/span    timeout=5s
     Click Element    xpath=//*[@id="header_container"]/div[2]/div/span/select/option[4]
 
-
-    Sleep    3
     Close Browser
 

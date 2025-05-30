@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-22T16:35:42.377924" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="D:\CV\robot_test\saucedemo\tests">
+<suite id="s1-s1" name="Robot Shopping" source="D:\CV\robot_test\saucedemo\tests\robot_shopping.robot">
+<test id="s1-s1-t1" name="Shopping One Product" line="12">
+<kw name="Get Chrome Options" owner="custom_browser">
+<msg time="2025-05-22T16:35:42.723410" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000011C593A9FD0&gt;</msg>
+<var>${options}</var>
+<status status="PASS" start="2025-05-22T16:35:42.723191" elapsed="0.000261"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:42.724271" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-22T16:35:42.724056" elapsed="1.373099"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:44.097921" level="INFO">Opening url 'https://saucedemo.com'</msg>
+<arg>https://saucedemo.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T16:35:44.097625" elapsed="0.757815"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:44.856206" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:44.855765" elapsed="0.203207"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.059627" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-05-22T16:35:45.114539" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.059357" elapsed="0.139582"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.201047" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.200544" elapsed="0.110729"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.311953" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.311660" elapsed="0.112535"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.424712" level="INFO">Clicking link '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.424507" elapsed="0.069731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=checkout</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.494737" elapsed="0.021398"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.516985" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.516710" elapsed="0.098864"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.616536" level="INFO">Typing text 'owl' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>owl</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.616073" elapsed="0.079270"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.695843" level="INFO">Typing text 'ton' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>ton</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.695641" elapsed="0.075234"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.771625" level="INFO">Typing text '45149' into text field 'id=postal-code'.</msg>
+<arg>id=postal-code</arg>
+<arg>45149</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.771384" elapsed="0.075401"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=continue</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.847086" elapsed="0.020883"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.868514" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.868331" elapsed="0.075173"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:45.944076" level="INFO">Clicking button 'id=finish'.</msg>
+<arg>id=finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:45.943854" elapsed="0.080292"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:46.024681" level="INFO">Clicking button 'id=back-to-products'.</msg>
+<arg>id=back-to-products</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:46.024484" elapsed="0.083125"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T16:35:46.108249" elapsed="2.186802"/>
+</kw>
+<status status="PASS" start="2025-05-22T16:35:42.722373" elapsed="5.573759"/>
+</test>
+<test id="s1-s1-t2" name="Shopping Many Product" line="37">
+<kw name="Get Chrome Options" owner="custom_browser">
+<msg time="2025-05-22T16:35:48.300794" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000011C592FFD90&gt;</msg>
+<var>${options}</var>
+<status status="PASS" start="2025-05-22T16:35:48.300088" elapsed="0.000848"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:48.302523" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-22T16:35:48.301800" elapsed="1.393743"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:49.696178" level="INFO">Opening url 'https://saucedemo.com'</msg>
+<arg>https://saucedemo.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T16:35:49.695971" elapsed="0.689332"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.386086" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.385728" elapsed="0.149306"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.536412" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-05-22T16:35:50.572208" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.536032" elapsed="0.087710"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.624451" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.624252" elapsed="0.103256"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.728212" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.727866" elapsed="0.086984"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.815368" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-bike-light'.</msg>
+<arg>id=add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.815154" elapsed="0.065621"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.881315" level="INFO">Clicking button 'id=add-to-cart-sauce-labs-fleece-jacket'.</msg>
+<arg>id=add-to-cart-sauce-labs-fleece-jacket</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.881127" elapsed="0.071372"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:50.953316" level="INFO">Clicking link '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:50.953051" elapsed="0.072958"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.026501" level="INFO">Clicking button 'id=continue-shopping'.</msg>
+<arg>id=continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.026318" elapsed="0.108758"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.136338" level="INFO">Clicking button 'id=add-to-cart-test.allthethings()-t-shirt-(red)'.</msg>
+<arg>id=add-to-cart-test.allthethings()-t-shirt-(red)</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.135684" elapsed="0.066438"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.202599" level="INFO">Clicking link '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.202415" elapsed="0.066290"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.269338" level="INFO">Clicking button 'id=remove-sauce-labs-backpack'.</msg>
+<arg>id=remove-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.269126" elapsed="0.066548"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.336259" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.336017" elapsed="0.070466"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.407165" level="INFO">Typing text 'owl' into text field 'id=first-name'.</msg>
+<arg>id=first-name</arg>
+<arg>owl</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.406861" elapsed="0.084636"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.492084" level="INFO">Typing text 'ton' into text field 'id=last-name'.</msg>
+<arg>id=last-name</arg>
+<arg>ton</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.491835" elapsed="0.074110"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.566806" level="INFO">Typing text '45149' into text field 'id=postal-code'.</msg>
+<arg>id=postal-code</arg>
+<arg>45149</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.566529" elapsed="0.082832"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.649829" level="INFO">Clicking button 'id=continue'.</msg>
+<arg>id=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.649648" elapsed="0.072146"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.722505" level="INFO">Clicking button 'id=finish'.</msg>
+<arg>id=finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.722236" elapsed="0.071421"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:51.794213" level="INFO">Clicking button 'id=back-to-products'.</msg>
+<arg>id=back-to-products</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.794013" elapsed="0.075370"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T16:35:51.869841" elapsed="2.211676"/>
+</kw>
+<status status="PASS" start="2025-05-22T16:35:48.298548" elapsed="5.784112"/>
+</test>
+<status status="PASS" start="2025-05-22T16:35:42.409342" elapsed="11.676157"/>
+</suite>
+<suite id="s1-s2" name="Test Sort" source="D:\CV\robot_test\saucedemo\tests\test_sort.robot">
+<test id="s1-s2-t1" name="Sort Z-A" line="12">
+<kw name="Get Chrome Options" owner="custom_browser">
+<msg time="2025-05-22T16:35:54.104930" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000011C592FFB10&gt;</msg>
+<var>${options}</var>
+<status status="PASS" start="2025-05-22T16:35:54.104496" elapsed="0.000509"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:54.106429" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-22T16:35:54.105742" elapsed="1.303850"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:55.410306" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T16:35:55.410028" elapsed="0.596840"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:56.008329" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.007786" elapsed="0.143190"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:56.152550" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-05-22T16:35:56.193839" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.152046" elapsed="0.104601"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:56.257438" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.257098" elapsed="0.116727"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:56.374570" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.374349" elapsed="0.082658"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/span</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.457315" elapsed="0.023939"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:56.481979" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select/option[2]'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select/option[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.481690" elapsed="0.038532"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T16:35:56.520799" elapsed="2.209747"/>
+</kw>
+<status status="PASS" start="2025-05-22T16:35:54.102292" elapsed="4.629284"/>
+</test>
+<test id="s1-s2-t2" name="Sort Price L-H" line="30">
+<kw name="Get Chrome Options" owner="custom_browser">
+<msg time="2025-05-22T16:35:58.736814" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000011C5946D5B0&gt;</msg>
+<var>${options}</var>
+<status status="PASS" start="2025-05-22T16:35:58.736212" elapsed="0.000748"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:35:58.738539" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-22T16:35:58.737887" elapsed="1.394122"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:00.133623" level="INFO">Opening url 'https://saucedemo.com'</msg>
+<arg>https://saucedemo.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T16:36:00.133303" elapsed="0.638861"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:00.772819" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:00.772568" elapsed="0.140608"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:00.913813" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-05-22T16:36:00.959210" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:00.913497" elapsed="0.102785"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:01.016948" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:01.016711" elapsed="0.104878"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:01.122243" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:01.121989" elapsed="0.083142"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/span</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T16:36:01.205430" elapsed="0.024447"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:01.230521" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select/option[3]'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select/option[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:01.230250" elapsed="0.041806"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T16:36:01.272760" elapsed="2.207742"/>
+</kw>
+<status status="PASS" start="2025-05-22T16:35:58.734620" elapsed="4.747038"/>
+</test>
+<test id="s1-s2-t3" name="Sort Price H-L" line="46">
+<kw name="Get Chrome Options" owner="custom_browser">
+<msg time="2025-05-22T16:36:03.485855" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000011C5946D350&gt;</msg>
+<var>${options}</var>
+<status status="PASS" start="2025-05-22T16:36:03.485291" elapsed="0.000707"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:03.487409" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-05-22T16:36:03.486787" elapsed="1.374717"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:04.862111" level="INFO">Opening url 'https://saucedemo.com'</msg>
+<arg>https://saucedemo.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T16:36:04.861907" elapsed="0.594043"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:05.456530" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.456294" elapsed="0.135076"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:05.592358" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2025-05-22T16:36:05.650663" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.591846" elapsed="0.117272"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:05.709758" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.709471" elapsed="0.113343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:05.823501" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.823222" elapsed="0.084856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/span</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.908456" elapsed="0.021987"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-22T16:36:05.931512" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select/option[4]'.</msg>
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select/option[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.931200" elapsed="0.043046"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T16:36:05.974991" elapsed="2.217830"/>
+</kw>
+<status status="PASS" start="2025-05-22T16:36:03.484002" elapsed="4.709447"/>
+</test>
+<status status="PASS" start="2025-05-22T16:35:54.089065" elapsed="14.105905"/>
+</suite>
+<status status="PASS" start="2025-05-22T16:35:42.388886" elapsed="25.808059"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="5" fail="0" skip="0">Tests</stat>
+<stat name="Robot Shopping" id="s1-s1" pass="2" fail="0" skip="0">Tests.Robot Shopping</stat>
+<stat name="Test Sort" id="s1-s2" pass="3" fail="0" skip="0">Tests.Test Sort</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-22T16:35:42.721249" level="WARN">Imported library 'D:\CV\robot_test\saucedemo\screenshot_listener.py' contains no keywords.</msg>
+</errors>
+</robot>
